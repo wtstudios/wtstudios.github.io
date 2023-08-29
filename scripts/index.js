@@ -158,9 +158,9 @@ function displayBullets() {
       tint(230, 40, 40, (bullet.timeLeft / 30) * 255);
     }
     rotate(bullet.angle - 90);
-    if(bullet.tracerLength > 3000) {
-      image(assetsLoaded["/assets/weapons/tracer-start.svg"], -12.5, bullet.tracerLength - 3000, 25, 3000);
-      image(assetsLoaded["/assets/weapons/tracer-end.svg"], -12.5, -5, 25, bullet.tracerLength - 2995);
+    if(bullet.tracerLength > 2000) {
+      image(assetsLoaded["/assets/weapons/tracer-start.svg"], -12.5, bullet.tracerLength - 2000, 25, 2000);
+      image(assetsLoaded["/assets/weapons/tracer-end.svg"], -12.5, -5, 25, bullet.tracerLength - 1995);
     } else {
       image(assetsLoaded["/assets/weapons/tracer-start.svg"], -12.5, -5, 25, bullet.tracerLength + 5);
     }
@@ -202,11 +202,11 @@ function displayPlayers() {
             rotate(-playerData.state.angle - 90);
           }
           if(!!playerData.state.force.y) {
-            image(assetsLoaded["/assets/misc/arrow.svg"], 0, 0, 30, playerData.state.force.y * 15);
+            image(assetsLoaded["/assets/misc/arrow.svg"], 0, 0, 30, playerData.state.force.y * 7);
           }
           if(!!playerData.state.force.x) {
             rotate(-90);
-            image(assetsLoaded["/assets/misc/arrow.svg"], 0, 0, 30, playerData.state.force.x * 15);          
+            image(assetsLoaded["/assets/misc/arrow.svg"], 0, 0, 30, playerData.state.force.x * 7);          
           }
         }
       }
