@@ -205,13 +205,13 @@ function setup() {
         for (let i = 0; i < gameData.users.length; i++) {
           let player = gameData.players[gameData.users[i]];
     
-          player.state.position.x += player.state.force.x * 0.45;
-          player.state.position.y += player.state.force.y * 0.45;
+          player.state.position.x += player.state.force.x * 0.35;
+          player.state.position.y += player.state.force.y * 0.35;
           if(gameData.users[i] == permanentID && gameData.players[permanentID].health > 0) {
-            queuedCameraLocation.x += player.state.force.x * 0.45;
-            queuedCameraLocation.y += player.state.force.y * 0.45;
-            queuedCameraLocation.targetX += player.state.force.x * 0.45;
-            queuedCameraLocation.targetY += player.state.force.y * 0.45;
+            queuedCameraLocation.x += player.state.force.x * 0.35;
+            queuedCameraLocation.y += player.state.force.y * 0.35;
+            queuedCameraLocation.targetX += player.state.force.x * 0.35;
+            queuedCameraLocation.targetY += player.state.force.y * 0.35;
           }
         }
       }
