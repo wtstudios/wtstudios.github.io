@@ -131,7 +131,7 @@ function displayGuns() {
       gun = playerData.guns[playerData.state.activeWeaponIndex],
       tickDelay = Date.now() - gameData.timeStamp;
       push();
-      translate(playerData.state.position.x + playerData.state.force.x * tickDelay / 115, playerData.state.position.y + playerData.state.force.y * tickDelay / 115);
+      translate(playerData.state.position.x + playerData.state.force.x * tickDelay / 200, playerData.state.position.y + playerData.state.force.y * tickDelay / 200);
       if(gameData.users[i] == permanentID) {
         rotate(atan2(mouseY - height / 2, mouseX - width / 2) + 90);
       } else {
@@ -198,13 +198,13 @@ function displayPlayers() {
       if (playerData.team == gameData.players[permanentID].team) {
         fill("#498fe9");
       }
-      translate(playerData.state.position.x + playerData.state.force.x * tickDelay / 115, playerData.state.position.y + playerData.state.force.y * tickDelay / 115);
+      translate(playerData.state.position.x + playerData.state.force.x * tickDelay / 200, playerData.state.position.y + playerData.state.force.y * tickDelay / 200);
       if(gameData.users[i] == permanentID) {
         rotate(atan2(mouseY - height / 2, mouseX - width / 2) + 90);
-        queuedCameraLocation.x = playerData.state.position.x + playerData.state.force.x * tickDelay / 115;
-        queuedCameraLocation.y  = playerData.state.position.y + playerData.state.force.y * tickDelay / 115;
-        queuedCameraLocation.targetX = playerData.state.position.x + playerData.state.force.x * tickDelay / 115;
-        queuedCameraLocation.targetY  = playerData.state.position.y + playerData.state.force.y * tickDelay / 115;
+        queuedCameraLocation.x = playerData.state.position.x + playerData.state.force.x * tickDelay / 200;
+        queuedCameraLocation.y  = playerData.state.position.y + playerData.state.force.y * tickDelay / 200;
+        queuedCameraLocation.targetX = playerData.state.position.x + playerData.state.force.x * tickDelay / 200;
+        queuedCameraLocation.targetY  = playerData.state.position.y + playerData.state.force.y * tickDelay / 200;
       } else {
         rotate(playerData.state.angle - 90);
       }
