@@ -201,10 +201,10 @@ function displayPlayers() {
       translate(playerData.state.position.x + playerData.state.force.x * tickDelay / 115, playerData.state.position.y + playerData.state.force.y * tickDelay / 115);
       if(gameData.users[i] == permanentID) {
         rotate(atan2(mouseY - height / 2, mouseX - width / 2) + 90);
-        queuedCameraLocation.x = playerData.state.position.x + playerData.state.force.x * tickDelay / 75;
-        queuedCameraLocation.y  = playerData.state.position.y + playerData.state.force.y * tickDelay / 75;
-        queuedCameraLocation.targetX = playerData.state.position.x + playerData.state.force.x * tickDelay / 75;
-        queuedCameraLocation.targetY  = playerData.state.position.y + playerData.state.force.y * tickDelay / 75;
+        queuedCameraLocation.x = playerData.state.position.x + playerData.state.force.x * tickDelay / 115;
+        queuedCameraLocation.y  = playerData.state.position.y + playerData.state.force.y * tickDelay / 115;
+        queuedCameraLocation.targetX = playerData.state.position.x + playerData.state.force.x * tickDelay / 115;
+        queuedCameraLocation.targetY  = playerData.state.position.y + playerData.state.force.y * tickDelay / 115;
       } else {
         rotate(playerData.state.angle - 90);
       }
