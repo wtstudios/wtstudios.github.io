@@ -26,7 +26,7 @@ let socket,
   state = "menu-main",
   permanentID;
 
-socket = io.connect("wss://rekoil-hp-usw.onrender.com");
+socket = io.connect(window.location.origin);
 
 function keyReleased() {
   if(assetsAreLoaded) {
