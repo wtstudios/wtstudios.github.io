@@ -292,10 +292,10 @@ function setup() {
       }
     }
     if(gameData.players[permanentID].health > 0) {
-      queuedCameraLocation.x = gameData.players[permanentID].state.position.x;
-      queuedCameraLocation.y = gameData.players[permanentID].state.position.y;
-      queuedCameraLocation.targetX = gameData.players[permanentID].state.position.x;
-      queuedCameraLocation.targetY = gameData.players[permanentID].state.position.y;  
+      queuedCameraLocation.x = data.players[permanentID].state.position.x;
+      queuedCameraLocation.y = data.players[permanentID].state.position.y;
+      queuedCameraLocation.targetX = data.players[permanentID].state.position.x;
+      queuedCameraLocation.targetY = data.players[permanentID].state.position.y;  
     } else {
       document.getElementById("weapon-selection").style.display = "block";
       document.getElementById("gun-hud").style.display = "none";
