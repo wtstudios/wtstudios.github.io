@@ -255,15 +255,6 @@ function setup() {
       gameData.particles.push(data.particles[i]);
       gameData.particles[gameData.particles.length - 1].timeStamp = Date.now();
     }
-    if(gameData.players[permanentID].health > 0) {
-      queuedCameraLocation.x = gameData.players[permanentID].state.position.x;
-      queuedCameraLocation.y = gameData.players[permanentID].state.position.y;
-      queuedCameraLocation.targetX = gameData.players[permanentID].state.position.x;
-      queuedCameraLocation.targetY = gameData.players[permanentID].state.position.y;  
-    } else {
-      document.getElementById("weapon-selection").style.display = "block";
-      document.getElementById("gun-hud").style.display = "none";
-    }
     for(let i = 0; i < gameData.queuedSounds.length; i++) {
       assetsLoaded[gameData.queuedSounds[i].path].volume(0);
       if((0.7 - Math.sqrt(squaredDist(gameData.players[permanentID].state.position, gameData.queuedSounds[i].origin)) / 10000) >= 0) {
@@ -301,6 +292,15 @@ function setup() {
       }
     }
   });
+  if(gameData.players[permanentID].health > 0) {
+    queuedCameraLocation.x = gameData.players[permanentID].state.position.x;
+    queuedCameraLocation.y = gameData.players[permanentID].state.position.y;
+    queuedCameraLocation.targetX = gameData.players[permanentID].state.position.x;
+    queuedCameraLocation.targetY = gameData.players[permanentID].state.position.y;  
+  } else {
+    document.getElementById("weapon-selection").style.display = "block";
+    document.getElementById("gun-hud").style.display = "none";
+  }
 }
 
 function draw() {

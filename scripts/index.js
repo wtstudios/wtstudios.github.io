@@ -29,6 +29,8 @@ function requestConnectToGame() {
   document.getElementById("select-scout").addEventListener("click", function() {changeGun("scout");});
 
   document.getElementById("respawn-button").addEventListener("click", function() {requestSpawn();});
+
+  state = "ingame-playing";
 }
 
 function changeGun(gun) {
