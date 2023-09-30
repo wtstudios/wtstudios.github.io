@@ -32,9 +32,6 @@ function requestConnectToGame() {
 }
 
 function changeGun(gun) {
-  //socket.emit("pick-weapon", {gun: gun});
-  //document.getElementById("weapon-selection").style.display = "none";
-  //document.getElementById("gun-hud").style.display = "block";
   document.getElementById("select-breach").style.backgroundColor = "#498ee967";
   document.getElementById("select-assault").style.backgroundColor = "#498ee967";
   document.getElementById("select-scout").style.backgroundColor = "#498ee967";

@@ -291,7 +291,7 @@ function setup() {
         break;
       }
     }
-    if(gameData.players[permanentID].health > 0) {
+    if(data.players[permanentID].health > 0) {
       queuedCameraLocation.x = data.players[permanentID].state.position.x;
       queuedCameraLocation.y = data.players[permanentID].state.position.y;
       queuedCameraLocation.targetX = data.players[permanentID].state.position.x;
