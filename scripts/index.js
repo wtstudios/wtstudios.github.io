@@ -29,8 +29,6 @@ function requestConnectToGame() {
   document.getElementById("select-scout").addEventListener("click", function() {changeGun("scout");});
 
   document.getElementById("respawn-button").addEventListener("click", function() {requestSpawn();});
-
-  state = "ingame-playing";
 }
 
 function changeGun(gun) {
@@ -94,7 +92,7 @@ function displayParticles() {
       tint(255, 255, 255, opacity);
       if(particleData.colour != "none") {
         fill(particleData.colour + hex(opacity)[6] + (hex(opacity)[7]));
-        if(particleData.colour == "blue" || particleData.colour == "red") {
+        if(particleData.colour == "blue" || particleData.colour === "red") {
           fill("#e9494f" + hex(opacity)[6] + (hex(opacity)[7]));
           if(particleData.colour == gameData.players[permanentID].team) {
             fill("#498fe9" + hex(opacity)[6] + (hex(opacity)[7]));
