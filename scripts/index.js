@@ -1,4 +1,4 @@
-// made by henry macdougall
+// HM2023
 
 let resizeTimer;
 window.addEventListener("resize", () => {
@@ -130,10 +130,6 @@ function updateHUD(data) {
     }
   }
   if(data.players[permanentID].health > 0) {
-    queuedCameraLocation.x = data.players[permanentID].state.position.x;
-    queuedCameraLocation.y = data.players[permanentID].state.position.y;
-    queuedCameraLocation.targetX = data.players[permanentID].state.position.x;
-    queuedCameraLocation.targetY = data.players[permanentID].state.position.y;  
   } else {
     document.getElementById("weapon-selection").style.display = "block";
     document.getElementById("gun-hud").style.display = "none";
