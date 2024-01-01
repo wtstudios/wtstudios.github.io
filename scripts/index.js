@@ -189,7 +189,7 @@ function updateHUD(data) {
     document.getElementById("weapon-selection").style.display = "block";
     document.getElementById("gun-hud").style.display = "none";
   } else if(document.getElementById("weapon-selection").style.display != "none") {
-    document.getElementById("weapon-selection").style.display == "none";
+    document.getElementById("weapon-selection").style.display = "none";
   }
   if(data.secondsLeft < 1) {
     document.getElementById("gun-hud").style.display = "none";
