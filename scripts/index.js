@@ -223,11 +223,11 @@ function updateHUD(data) {
     document.getElementById("blue-score-container").style.display = "block";
     document.getElementById("time-left-container").style.display = "block";
     document.getElementById("red-score-container").style.display = "block";
-    document.getElementById("scoreboard-container").style.display = "none";
     document.getElementById("gun-hud").style.display = "block";
   } else {
     document.getElementById("scoreboard-container").style.display = "none";
     document.getElementById("end-of-game-page-container").style.display = "none";
+    document.getElementById("scoreboard-container").style.display = "none";
   }
 }
 
