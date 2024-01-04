@@ -218,12 +218,13 @@ function updateHUD(data) {
         }
       break;
     }
-  } else if(document.getElementById("blue-score-container").style.display != "block") {
+  } else if(document.getElementById("blue-score-container").style.display != "block" || document.getElementById("gun-hud").style.display != "block") {
     document.getElementById("blue-score-container").style.display = "block";
     document.getElementById("time-left-container").style.display = "block";
     document.getElementById("red-score-container").style.display = "block";
     document.getElementById("scoreboard-container").style.display = "none";
     document.getElementById("end-of-game-page-container").style.display = "none";
+    document.getElementById("gun-hud").style.display = "block";
   }
 }
 
