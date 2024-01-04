@@ -64,7 +64,8 @@ function requestSpawn() {
   document.getElementById("weapon-selection").style.display = "none";
   document.getElementById("gun-hud").style.display = "block";
   gameData.players[permanentID].health = 100;
-  updateGunHUD();
+  updateGunHUD(gameData);
+  updateHUD(gameData);
 }
 
 function connectToRemoteServer(address) {
@@ -218,13 +219,15 @@ function updateHUD(data) {
         }
       break;
     }
-  } else if(document.getElementById("blue-score-container").style.display != "block" || document.getElementById("gun-hud").style.display != "block") {
+  } else if(data.players[permanentID].health > 0) {
     document.getElementById("blue-score-container").style.display = "block";
     document.getElementById("time-left-container").style.display = "block";
     document.getElementById("red-score-container").style.display = "block";
     document.getElementById("scoreboard-container").style.display = "none";
-    document.getElementById("end-of-game-page-container").style.display = "none";
     document.getElementById("gun-hud").style.display = "block";
+  } else {
+    document.getElementById("scoreboard-container").style.display = "none";
+    document.getElementById("end-of-game-page-container").style.display = "none";
   }
 }
 
