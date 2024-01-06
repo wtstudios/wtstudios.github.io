@@ -53,6 +53,22 @@ function keyReleased() {
   }
 }
 
+function mouseWheel(event) {
+  if(event.delta > 0) {
+    if(gameData.players[permanentID].state.activeWeaponIndex == 2) {
+      socket.emit("change-weapon-index", {index: 0});
+    } else {
+      socket.emit("change-weapon-index", {index: gameData.players[permanentID].state.activeWeaponIndex + 1});
+    }
+  } else if(event.delta < 0) {
+    if(gameData.players[permanentID].state.activeWeaponIndex == 0) {
+      socket.emit("change-weapon-index", {index: 2});
+    } else {
+      socket.emit("change-weapon-index", {index: gameData.players[permanentID].state.activeWeaponIndex - 1});
+    }
+  }
+}
+
 function keyPressed() {
   if(assetsAreLoaded) {
     keys[keyCode] = true;
