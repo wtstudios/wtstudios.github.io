@@ -1,6 +1,12 @@
 {
     "updates": [
         {
+            "version": "0.1.9.1",
+            "title": "Graphical Tweak",
+            "date": "January 20, 2024",
+            "content": "- Changed X45 Autopistol sideview image <br>- Buffed X45 mag size (15 – 17)"
+        },
+        {
             "version": "0.1.9",
             "title": "New Item",
             "date": "January 18, 2024",
