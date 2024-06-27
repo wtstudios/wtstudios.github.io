@@ -34,6 +34,20 @@ p {
   transform: skew(calc(-14deg));
 }
 
+a {
+  color: rgb(240, 240, 240);
+  font-family: "bebas";
+  font-size: calc(5vw + 5vh);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  transform: skew(calc(-14deg));
+}
+
 button {
   display: block;
   background-color: #498ee967;
